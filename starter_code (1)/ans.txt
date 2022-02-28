@@ -1,0 +1,15 @@
+1) yes
+2) movl	$7777, -8(%rbp) : this statment suggests that the value of a is calculated before runtime.
+3) no
+4) movl	$7777, -8(%rbp)
+	movl	-8(%rbp), %eax
+	subl	$2222, %eax
+    These three statements suggest that value is not propogated to the next statements or neither pre-calculated during calculated instead they will be substitued during runtime.
+
+
+Part 2
+
+1) yes
+2) 	movl	$7777, %edx :this statment suggests that the value of a is calculated during compile time.
+3) yes
+4) 	movl	$5555, %ecx : this statement suggest that the value of a is propogated and b is calculated during compile time rather than runtime.
