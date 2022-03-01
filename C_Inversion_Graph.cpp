@@ -32,20 +32,20 @@ int main()
             }
         }
         vector<int> vis(n + 1, 0);
+        // for (auto x : vis)
+        //     cout << x << " ,";
+        // cout << endl;
         int ans = 0;
         for (int i = 1; i <= n; ++i)
         {
-            for (auto x : adj[i])
+            if (!vis[i])
             {
-                if (!vis[x])
-                {
-                    ans += 1;
-                    dfs(vis, adj, x);
-                }
+                // cout<<"x : "<<x<<endl;
+                ans += 1;
+                dfs(vis, adj,i);
             }
         }
-        cout<<ans<<endl;
-        
+        cout << ans << endl;
     }
     /* code */
 
